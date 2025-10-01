@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Peraturan - Website Pemerintah</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo-area">
+                <img src="https://dinkukmp.purworejokab.go.id/asset/foto_statis/Logo_Direktorat_Metrologi1.png" alt="Logo Direktorat Metrologi">
+                <div class="site-title">
+                    <h1>Direktorat Metrologi</h1>
+                    <p>Republik Indonesia</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <h2>Basis Data Peraturan</h2>
+                <p>Temukan peraturan perundang-undangan yang telah ditetapkan oleh instansi kami.</p>
+            </div>
+
+            <div class="filter-section">
+                <input type="text" id="searchInput" placeholder="Cari berdasarkan nomor atau judul peraturan...">
+                <select name="kategori" id="categoryFilter">
+                    <option value="">Semua Kategori</option>
+                    <option value="uu">Undang-Undang</option>
+                    <option value="pp">Peraturan Pemerintah</option>
+                    <option value="permen">Peraturan Menteri Perdagangan</option>
+                    <option value="st-uttp">Syarat Teknis UTTP</option>
+                    <option value="st-suml">Syarat Teknis SUML</option>
+                    <option value="st-pertip">Syarat Teknis Persetujuan Tipe</option>
+                    <option value="tata-evatip">Tata Cara Evaluasi Tipe</option>
+                    <option value="ref-int">Referensi Internasional</option>
+                    <option value="juknis">Petunjuk Teknis</option>
+                    <option value="suran">Surat Edaran</option>
+                    <option value="video">Video UTTP</option>
+                    <option value="sni">Standar Nasional Indonesia/Internasional Standar</option>
+                    <option value="permepan">Peraturan Menteri Pemberdayaan Aparatur Negara</option>
+                    <option value="transki">Transparansi Kinerja</option>
+                </select>
+                <button type="button">Cari</button>
+            </div>
+
+            <!--LIST PERATURAN SEMUA KATEGORI-->
+            <div class="peraturan-list">
+
+                <!--LIST PERATURAN UNDANG-UNDANG-->
+                <div class="peraturan-item" data-category="uu">
+                    <h3><a href="https://drive.google.com/file/d/1sQ1sXieqQRvCXsfgRqA_7rB1I4IGxFID/view">Undang-Undang Nomor 2 Tahun 1981</a></h3>
+                    <p>Tentang Metrologi Legal</p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 1 April 1981</span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                     <a href="https://drive.google.com/uc?export=download&id=1sQ1sXieqQRvCXsfgRqA_7rB1I4IGxFID" class="download-button" download="*">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                <div class="peraturan-item" data-category="uu">
+                    <h3><a href="https://drive.google.com/file/d/1AEF8WtDeyTpmozbidSSzArXN4qblmX9k/view">Undang-Undang Nomor 23 Tahun 2014</a></h3>
+                    <p>Tentang Pemerintah Daerah</p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 2 Oktober 2014</span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                     <a href="https://drive.google.com/uc?export=download&id=1AEF8WtDeyTpmozbidSSzArXN4qblmX9k" class="download-button" download="*">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                <div class="peraturan-item" data-category="uu">
+                    <h3><a href="https://drive.google.com/file/d/1F3c8Fbhhx9hFE1jWOcTI37f74cQnEzX6/view">Undang-Undang Nomor 6 Tahun 2023</a></h3>
+                    <p>Tentang Cipta Kerja</p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 31 Maret 2023</span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                     <a href="https://drive.google.com/uc?export=download&id=1F3c8Fbhhx9hFE1jWOcTI37f74cQnEzX6" class="download-button" download="*">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                <div class="peraturan-item" data-category="uu">
+                    <h3><a href="https://drive.google.com/file/d/1O7yV4O2j_hzq12ra2IuauEGY9MaAatql/view">Undang-Undang Nomor 25 Tahun 2009</a></h3>
+                    <p>Tentang Pelayanan Publik</p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 18 Juli 2009</span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                     <a href="https://drive.google.com/uc?export=download&id=1O7yV4O2j_hzq12ra2IuauEGY9MaAatql" class="download-button" download="*">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                <div class="peraturan-item" data-category="uu">
+                    <h3><a href="https://drive.google.com/file/d/1POd0RShQONnQnrKXO0NwP33LNR3oFC5M/view?usp=drivesdk">Undang-Undang Nomor 7 Tahun 2014</a></h3>
+                    <p>Tentang Perdagangan</p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 11 Maret 2014</span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                     <a href="https://drive.google.com/uc?export=download&id=1POd0RShQONnQnrKXO0NwP33LNR3oFC5M" class="download-button" download="*">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                <div class="peraturan-item" data-category="uu">
+                    <h3><a href="https://drive.google.com/file/d/12b_j4tcAgorqJ39RxWrMIcFs-mUjt0l-/view">Undang-Undang Nomor 8 Tahun 1999</a></h3>
+                    <p>Tentang Perlindungan Konsumen</p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 20 April 1999</span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                     <a href="https://drive.google.com/uc?export=download&id=12b_j4tcAgorqJ39RxWrMIcFs-mUjt0l-" class="download-button" download="*">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                <!--LIST PERATURAN PEMERINTAH-->
+                <div class="peraturan-item" data-category="pp">
+                    <h3><a href="#">Peraturan Pemerintah Nomor 5 Tahun 2021</a></h3>
+                    <p>Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko</p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 2 Februari 2021</span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                    <a href="#" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                <!--LIST PERATURAN MENTERI PERDAGANGAN-->
+                <div class="peraturan-item" data-category="permen">
+                    <h3><a href="#">Peraturan Menteri Keuangan Nomor 118/PMK.01/2021</a></h3>
+                    <p>Tentang Organisasi dan Tata Kerja Kementerian Keuangan.</p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 1 September 2021</span>
+                        <span class="status diubah">Diubah</span>
+                    </div>
+                    <a href="#" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+                <div class="peraturan-item" data-category="permen">
+                    <h3><a href="#">Peraturan Menteri Keuangan Nomor 118/PMK.01/2021</a></h3>
+                    <p>Tentang Organisasi dan Tata Kerja Kementerian Keuangan.</p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 1 September 2021</span>
+                        <span class="status diubah">Diubah</span>
+                    </div>
+                    <a href="#" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                 <div class="peraturan-item" data-category="st-uttp">
+                    <h3><a href="#">Syarat Teknis Meter Kayu</a></h3>
+                    <p>Tentang Cipta Kerja.</p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 2 November 2020</span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                     <a href="#" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Direktorat Metrologi. Hak Cipta Dilindungi Undang-Undang.</p>
+            <p>Jl. Pasteur No.27, RT.02, Pasir Kaliki, Kec. Cicendo, Kota Bandung, Jawa Barat 40171</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            const searchInput = document.getElementById('searchInput');
+            const categoryFilter = document.getElementById('categoryFilter');
+            const regulationItems = document.querySelectorAll('.peraturan-item');
+
+            function performFilter() {
+                const searchText = searchInput.value.toLowerCase();
+                const selectedCategory = categoryFilter.value;
+
+                regulationItems.forEach(item => {
+                    
+                    const itemTitle = item.querySelector('h3 a').textContent.toLowerCase();
+                    const itemCategory = item.dataset.category;
+
+                    const textMatch = itemTitle.includes(searchText);
+                    
+                    const categoryMatch = (selectedCategory === "" || selectedCategory === itemCategory);
+
+                    
+                    if (textMatch && categoryMatch) {
+                        item.style.display = 'flex'; 
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+
+          
+            searchInput.addEventListener('keyup', performFilter);
+            
+            categoryFilter.addEventListener('change', performFilter);
+        });
+    </script>
+
+</body>
+</html>
