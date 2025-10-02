@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
     <header>
-        <div class="container">
+        <div class="container header-content">
             <div class="logo-area">
                 <img src="https://dinkukmp.purworejokab.go.id/asset/foto_statis/Logo_Direktorat_Metrologi1.png" alt="Logo Direktorat Metrologi">
                 <div class="site-title">
@@ -21,18 +22,24 @@
                     <p>Republik Indonesia</p>
                 </div>
             </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <main>
-        <div class="container">
-            <div class="page-header">
-                <h2>Basis Data Peraturan</h2>
-                <p>Temukan peraturan perundang-undangan yang telah ditetapkan oleh instansi kami.</p>
-            </div>
+        <div class="hero-section">
+            <h2>Direktorat Metrologi</h2>
+            <p>Jaringan Dokumentasi dan Informasi Hukum Direktorat Metrologi</p>
+        </div>
 
+        <div class="container">
             <div class="filter-section">
-                <input type="text" id="searchInput" placeholder="Cari berdasarkan nomor atau judul peraturan...">
+                <input type="text" id="searchInput" placeholder="Cari berdasarkan nomor atau judul...">
+                
                 <select name="kategori" id="categoryFilter">
                     <option value="">Semua Kategori</option>
                     <option value="uu">Undang-Undang</option>
@@ -50,9 +57,20 @@
                     <option value="permepan">Peraturan Menteri Pemberdayaan Aparatur Negara</option>
                     <option value="transki">Transparansi Kinerja</option>
                 </select>
+
+                <select name="tahun" id="yearFilter">
+                    <option value="">Semua Tahun</option>
+                </select>
+
                 <button type="button">Cari</button>
             </div>
 
+            <div class="page-header">
+                <h2>Basis Data Peraturan</h2>
+                <p>Temukan peraturan perundang-undangan yang telah ditetapkan oleh departemen perdagangan</p>
+            </div>
+
+           
             <!--LIST PERATURAN SEMUA KATEGORI-->
             <div class="peraturan-list">
 
@@ -131,41 +149,283 @@
 
                 <!--LIST PERATURAN PEMERINTAH-->
                 <div class="peraturan-item" data-category="pp">
-                    <h3><a href="#">Peraturan Pemerintah Nomor 5 Tahun 2021</a></h3>
-                    <p>Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko</p>
+                    <h3><a href="https://drive.google.com/file/d/1wO8bxn6r4mudxUZe5zcxlmPloCow81oj/view?usp=sharing">Peraturan Pemerintah Nomor 2 Tahun 1985</a></h3>
+                    <p>Tentang Wajib dan Pembebasan untuk Ditera dan/atau Ditera Ulang Serta Syarat-Syarat Bagi UTTP</p>
                     <div class="metadata">
-                        <span class="tanggal">Ditetapkan: 2 Februari 2021</span>
+                        <span class="tanggal">Ditetapkan: 7 Januari 1985 </span>
                         <span class="status berlaku">Berlaku</span>
                     </div>
-                    <a href="#" class="download-button">
+                    <a href="https://drive.google.com/uc?export=download&id=1wO8bxn6r4mudxUZe5zcxlmPloCow81oj" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+                
+                <div class="peraturan-item" data-category="pp">
+                    <h3><a href="https://drive.google.com/file/d/1A8aVn2oa9wmcCgifpHYGIcOedZU3Oepv/view?usp=drivesdk">Peraturan Pemerintah Nomor 10 Tahun 1987</a></h3>
+                    <p>Tentang Satuan Turunan, Satuan tambahan dan Satuan Lain yang Berlaku</p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 19 Mei 1987 </span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                    <a href="https://drive.google.com/uc?export=download&id=1A8aVn2oa9wmcCgifpHYGIcOedZU3Oepv" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                <div class="peraturan-item" data-category="pp">
+                    <h3><a href="https://drive.google.com/file/d/1A9FPW88EcKJgTcahMh16esFGryGvwQMG/view">Peraturan Pemerintah Nomor 31 Tahun 2017</a></h3>
+                    <p>Tentang Jenis dan Tarif atas Jenis Penerimaan Negara Bukan Pajak yang Berlaku pada Kementerian Perdagangan</p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 6 September 2017 </span>
+                        <span class="status dicabut">Dicabut</span>
+                    </div>
+                    <a href="https://drive.google.com/uc?export=download&id=1A9FPW88EcKJgTcahMh16esFGryGvwQMG" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                <div class="peraturan-item" data-category="pp">
+                    <h3><a href="https://drive.google.com/file/d/1ml60Z7JPChrs4QffAigIlDAQVnG7kpgp/view">Peraturan Pemerintah Nomor 28 Tahun 2025</a></h3>
+                    <p>Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko</p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 5 Juni 2025 </span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                    <a href="https://drive.google.com/uc?export=download&id=1ml60Z7JPChrs4QffAigIlDAQVnG7kpgp" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                <div class="peraturan-item" data-category="pp">
+                    <h3><a href="https://drive.google.com/file/d/1oWKdF9RSR4VT4uinoLA_G5UmnAae-Lp9/view?usp=sharing">Lampiran 1 Peraturan Pemerintah Nomor 28 Tahun 2025</a></h3>
+                    <p>Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko</p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 5 Juni 2025 </span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                    <a href="https://drive.google.com/uc?export=download&id=1oWKdF9RSR4VT4uinoLA_G5UmnAae-Lp9" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                <div class="peraturan-item" data-category="pp">
+                    <h3><a href="https://drive.google.com/file/d/1u3uIv58U3nK-1hNnY3Pbw2EvjVmxTFFz/view?usp=sharing">Lampiran 2 Peraturan Pemerintah Nomor 28 Tahun 2025</a></h3>
+                    <p>Tentang Penyelenggaraan Perizinan Berusaha Berbasis Risiko</p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 5 Juni 2025 </span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                    <a href="https://drive.google.com/uc?export=download&id=1u3uIv58U3nK-1hNnY3Pbw2EvjVmxTFFz" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+                
+                <div class="peraturan-item" data-category="pp">
+                    <h3><a href="https://drive.google.com/file/d/1AcRiAldfmCqCsemuVWUvVMppVHFxqhEQ/view?usp=drivesdk">Peraturan Pemerintah Nomor 29 Tahun 2021</a></h3>
+                    <p>Tentang Penyelenggaraan Bidang Perdagangan</p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 2 Februari 2021 </span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                    <a href="https://drive.google.com/uc?export=download&id=1AcRiAldfmCqCsemuVWUvVMppVHFxqhEQ" class="download-button">
                         <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
                     </a>
                 </div>
 
                 <!--LIST PERATURAN MENTERI PERDAGANGAN-->
                 <div class="peraturan-item" data-category="permen">
-                    <h3><a href="#">Peraturan Menteri Keuangan Nomor 118/PMK.01/2021</a></h3>
-                    <p>Tentang Organisasi dan Tata Kerja Kementerian Keuangan.</p>
+                    <h3><a href="https://drive.google.com/file/d/1GxKOoat9rIbwk5rK8rmbXi0-3CQ5B04-/view?usp=sharing">Peraturan Menteri Perdagangan Nomor 24 Tahun 2024</a></h3>
+                    <p>Kegiatan Tera dan Tera Ulang UTTP</p>
                     <div class="metadata">
-                        <span class="tanggal">Ditetapkan: 1 September 2021</span>
-                        <span class="status diubah">Diubah</span>
+                        <span class="tanggal">Ditetapkan: 4 Oktober 2024</span>
+                        <span class="status berlaku">Berlaku</span>
                     </div>
-                    <a href="#" class="download-button">
-                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
-                    </a>
-                </div>
-                <div class="peraturan-item" data-category="permen">
-                    <h3><a href="#">Peraturan Menteri Keuangan Nomor 118/PMK.01/2021</a></h3>
-                    <p>Tentang Organisasi dan Tata Kerja Kementerian Keuangan.</p>
-                    <div class="metadata">
-                        <span class="tanggal">Ditetapkan: 1 September 2021</span>
-                        <span class="status diubah">Diubah</span>
-                    </div>
-                    <a href="#" class="download-button">
+                    <a href="https://drive.google.com/uc?export=download&id=1GxKOoat9rIbwk5rK8rmbXi0-3CQ5B04-" class="download-button">
                         <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
                     </a>
                 </div>
 
+                <div class="peraturan-item" data-category="permen">
+                    <h3><a href="https://drive.google.com/file/d/14qvPInb4VaFxl0pHpEDk7hV7sbagjajT/view?usp=drive_link">Peraturan Menteri Perdagangan Nomor 31 Tahun 2024</a></h3>
+                    <p>Tentang Standar Ukuran Metrologi Legal</p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 28 November 2024</span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                    <a href="https://drive.google.com/uc?export=download&id=14qvPInb4VaFxl0pHpEDk7hV7sbagjajT" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                 <div class="peraturan-item" data-category="permen">
+                    <h3><a href="https://drive.google.com/file/d/1smZLyVJHAkCrqATo2Fvp4LI_nw3qXTvS/view?usp=sharing">Peraturan Menteri Perdagangan Nomor 115 Tahun 2018 </a></h3>
+                    <p>Tentang Unit Metrologi Legal </p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 10 Desember 2018</span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                     <a href="https://drive.google.com/uc?export=download&id=1smZLyVJHAkCrqATo2Fvp4LI_nw3qXTvS" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                 <div class="peraturan-item" data-category="permen">
+                    <h3><a href="https://drive.google.com/file/d/1trfGpQqAz2fbPCAHp5ks84VbpXa-at-d/view?usp=sharing">Peraturan Menteri Perdagangan Nomor 9 Tahun 2020 </a></h3>
+                    <p>Tentang Fasilitasi Kegiatan Metrologi Legal </p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 5 Februari 2020</span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                     <a href="https://drive.google.com/uc?export=download&id=1trfGpQqAz2fbPCAHp5ks84VbpXa-at-d" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                 <div class="peraturan-item" data-category="permen">
+                    <h3><a href="https://drive.google.com/file/d/1hpz0kbBxI0Kqe83cp2cgG6FtbHMibBv8/view?usp=sharing">Peraturan Menteri Perdagangan Nomor 30 Tahun 2025 </a></h3>
+                    <p>Tentang Pengawasan Metrologi Legal </p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 2 November 2020</span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                     <a href="https://drive.google.com/uc?export=download&id=1hpz0kbBxI0Kqe83cp2cgG6FtbHMibBv8" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                 <div class="peraturan-item" data-category="permen">
+                    <h3><a href="https://drive.google.com/file/d/1Qvo1yu1cJYnjX8h_lbd0BkPME_QV8bUk/view?usp=sharing">Peraturan Menteri Perdagangan Nomor 31 Tahun 2011 </a></h3>
+                    <p>Tentang Barang Dalam Keadaan Terbungkus </p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 13 Oktober 2011</span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                     <a href="https://drive.google.com/uc?export=download&id=1Qvo1yu1cJYnjX8h_lbd0BkPME_QV8bUk" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                 <div class="peraturan-item" data-category="permen">
+                    <h3><a href="https://drive.google.com/file/d/1elaN4krwuJXy-5tpCucs9Mb4V34dombK/view?usp=sharing">Peraturan Menteri Perdagangan Nomor 90 Tahun 2020 </a></h3>
+                    <p>Tentang Juru Ukur, Takar dan Timbang</p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 9 November 2020</span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                     <a href="https://drive.google.com/uc?export=download&id=1elaN4krwuJXy-5tpCucs9Mb4V34dombK" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                 <div class="peraturan-item" data-category="permen">
+                    <h3><a href="https://drive.google.com/file/d/1PBCPLjtF5Mmey8L0y-QDR9NrLsgrR1Ro/view?usp=drive_link">Peraturan Menteri Perdagangan Nomor 21 Tahun 2023 </a></h3>
+                    <p>Tentang Penetapan Standar Kegiatan Usaha dan Produk Pada Penyelenggaraan Perizinan Berusaha Berbasis Risiko Sektor Perdagangan </p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 26 Juni 2023</span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                     <a href="https://drive.google.com/uc?export=download&id=1PBCPLjtF5Mmey8L0y-QDR9NrLsgrR1Ro" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                 <div class="peraturan-item" data-category="permen">
+                    <h3><a href="https://drive.google.com/file/d/1ADhdT1_qBKxCUZoXdHD9G-SwluNxjUBj/view?usp=drivesdk">Peraturan Menteri Perdagangan Nomor 73 Tahun 2016 </a></h3>
+                    <p>Tentang Tingkat Kesulitan UTTP </p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 24 Oktober 2016</span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                     <a href="https://drive.google.com/uc?export=download&id=1ADhdT1_qBKxCUZoXdHD9G-SwluNxjUBj" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                 <div class="peraturan-item" data-category="permen">
+                    <h3><a href="https://drive.google.com/file/d/1OMv-NqiEsNrXuACB9InCx0iiWjsyJq9r/view?usp=drivesdk">Peraturan Menteri Perdagangan Nomor 85 Tahun 2016 </a></h3>
+                    <p>Tentang Pelayanan Terpadu Perdagangan</p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 23 Desember 2016</span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                     <a href="https://drive.google.com/uc?export=download&id=1OMv-NqiEsNrXuACB9InCx0iiWjsyJq9r" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                 <div class="peraturan-item" data-category="permen">
+                    <h3><a href="https://drive.google.com/file/d/1mqY8qWVjcy7KeG0NsAO_W54LFczEi9gE/view">Peraturan Menteri Perdagangan Nomor 20 Tahun 2022 </a></h3>
+                    <p>Tentang Petunjuk Teknis Persetujuan Tipe </p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 22 April 2022</span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                     <a href="https://drive.google.com/uc?export=download&id=1mqY8qWVjcy7KeG0NsAO_W54LFczEi9gE" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                 <div class="peraturan-item" data-category="permen">
+                    <h3><a href="https://drive.google.com/file/d/1TANchpya_L-Ozrbtt-y28qxFYugJZb7P/view?usp=sharing">Peraturan Menteri Perdagangan Nomor 6 Tahun 2025 </a></h3>
+                    <p>Tentang Organisasi dan Tata Kerja Kementerian Perdagangan </p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 22 Januari 2025</span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                     <a href="https://drive.google.com/uc?export=download&id=1TANchpya_L-Ozrbtt-y28qxFYugJZb7P" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                 <div class="peraturan-item" data-category="permen">
+                    <h3><a href="https://drive.google.com/file/d/1GsUO7stGV3xVZZkddO2aNgQkAjonB2fI/view?usp=sharing">Peraturan Menteri Perdagangan Nomor 28 Tahun 2025 </a></h3>
+                    <p>Tentang Organisasi dan Tata Kerja Unit Pelaksana Teknis Kementerian Perdagangan</p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 12 Agustus 2025</span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                     <a href="https://drive.google.com/uc?export=download&id=1GsUO7stGV3xVZZkddO2aNgQkAjonB2fI" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                 <div class="peraturan-item" data-category="permen">
+                    <h3><a href="https://drive.google.com/file/d/1e1-ymcEBahWFrbfED2k8dS1XN2nrDsi4/view?usp=drive_link">Peraturan Menteri Perdagangan Nomor 30 Tahun 2024 </a></h3>
+                    <p>Tentang Tanda Sah Tahun 2025 </p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 28 November 2024</span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                     <a href="https://drive.google.com/uc?export=download&id=1e1-ymcEBahWFrbfED2k8dS1XN2nrDsi4" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                 <div class="peraturan-item" data-category="permen">
+                    <h3><a href="https://drive.google.com/file/d/13IhfMaBwj4Eqa5_jHaMJPtEG1cYyJoqJ/view?usp=sharing">Peraturan Menteri Perdagangan Nomor 29 Tahun 2025 </a></h3>
+                    <p>Tentang Tanda Sah Tahun 2026 </p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 8 September 2025</span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                     <a href="https://drive.google.com/uc?export=download&id=13IhfMaBwj4Eqa5_jHaMJPtEG1cYyJoqJ" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                 <div class="peraturan-item" data-category="permen">
+                    <h3><a href="https://drive.google.com/file/d/1lDoCjHjwYwi0KgrZyOYQTx75PMm9Oe0m/view?usp=drive_link">Peraturan Menteri Perdagangan Nomor 4 Tahun 2025 </a></h3>
+                    <p>Tentang Petunjuk Teknis Jabatan Fungsional Bidang Perdagangan </p>
+                    <div class="metadata">
+                        <span class="tanggal">Ditetapkan: 14 Januari 2025</span>
+                        <span class="status berlaku">Berlaku</span>
+                    </div>
+                     <a href="https://drive.google.com/uc?export=download&id=1lDoCjHjwYwi0KgrZyOYQTx75PMm9Oe0m" class="download-button">
+                        <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
+                    </a>
+                </div>
+
+                <!--LIST PERATURAN SYARAT TEKNIS UTTP-->
                  <div class="peraturan-item" data-category="st-uttp">
                     <h3><a href="#">Syarat Teknis Meter Kayu</a></h3>
                     <p>Tentang Cipta Kerja.</p>
@@ -173,13 +433,14 @@
                         <span class="tanggal">Ditetapkan: 2 November 2020</span>
                         <span class="status berlaku">Berlaku</span>
                     </div>
-                     <a href="#" class="download-button">
+                     <a href="https://drive.google.com/uc?export=download&id=" class="download-button">
                         <i class="fas fa-file-pdf"></i> Unduh Dokumen (.pdf)
                     </a>
                 </div>
 
             </div>
         </div>
+
     </main>
 
     <footer>
@@ -192,25 +453,43 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
 
+            // --- Bagian untuk mengisi pilihan tahun ---
+            const yearFilter = document.getElementById('yearFilter');
+            const currentYear = 2025;
+            const startYear = 1981;
+            for (let year = currentYear; year >= startYear; year--) {
+                const option = document.createElement('option');
+                option.value = year;
+                option.textContent = year;
+                yearFilter.appendChild(option);
+            }
+
+            // --- Bagian untuk logika filter ---
             const searchInput = document.getElementById('searchInput');
             const categoryFilter = document.getElementById('categoryFilter');
+            const searchButton = document.querySelector('.filter-section button');
             const regulationItems = document.querySelectorAll('.peraturan-item');
 
             function performFilter() {
                 const searchText = searchInput.value.toLowerCase();
                 const selectedCategory = categoryFilter.value;
+                const selectedYear = yearFilter.value; // Ambil nilai tahun yang dipilih
 
                 regulationItems.forEach(item => {
-                    
                     const itemTitle = item.querySelector('h3 a').textContent.toLowerCase();
+                    const itemDescription = item.querySelector('p').textContent.toLowerCase();
                     const itemCategory = item.dataset.category;
-
-                    const textMatch = itemTitle.includes(searchText);
                     
+                    // Ekstrak 4 digit angka dari judul untuk mendapatkan tahun
+                    const yearMatchInTitle = itemTitle.match(/\b\d{4}\b/);
+                    const itemYear = yearMatchInTitle ? yearMatchInTitle[0] : null;
+
+                    const textMatch = itemTitle.includes(searchText) || itemDescription.includes(searchText);
                     const categoryMatch = (selectedCategory === "" || selectedCategory === itemCategory);
+                    const yearMatch = (selectedYear === "" || selectedYear === itemYear); // Kondisi pengecekan tahun
 
-                    
-                    if (textMatch && categoryMatch) {
+                    // Item akan tampil jika semua kondisi terpenuhi
+                    if (textMatch && categoryMatch && yearMatch) {
                         item.style.display = 'flex'; 
                     } else {
                         item.style.display = 'none';
@@ -218,10 +497,11 @@
                 });
             }
 
-          
+            // Tambahkan event listener untuk semua filter
             searchInput.addEventListener('keyup', performFilter);
-            
             categoryFilter.addEventListener('change', performFilter);
+            yearFilter.addEventListener('change', performFilter); // Event listener untuk filter tahun
+            searchButton.addEventListener('click', performFilter);
         });
     </script>
 

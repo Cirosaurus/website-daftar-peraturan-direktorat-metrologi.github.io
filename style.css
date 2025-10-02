@@ -1,241 +1,250 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: #f4f7fa;
+            color: #333;
+        }
 
-body {
-    font-family: 'Lato', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f7f9;
-    color: #333;
-}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+        header {
+            background-color: #ffffff;
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
 
-header {
-    background-color: #ffffff;
-    padding: 1rem 0;
-    border-bottom: 3px solid #0056b3;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-header .container {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-}
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
 
-.logo-area {
-    display: flex;
-    align-items: center;
-}
+        .logo-area img {
+            height: 50px;
+            margin-right: 15px;
+        }
 
-.logo-area img {
-    height: 100px;
-    width: auto;  
-    margin-right: 15px;
-}
+        .site-title h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #1e3a8a;
+            font-weight: 700;
+        }
 
-.logo-placeholder {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background-color: #ccc;
-    color: #fff;
-    text-align: center;
-    line-height: 50px;
-    font-weight: bold;
-    margin-right: 15px;
-}
+        .site-title p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
 
-.site-title h1 {
-    font-family: 'Merriweather', serif;
-    font-size: 1.5rem;
-    color: #003366;
-    margin: 0;
-}
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-.site-title p {
-    font-size: 0.9rem;
-    color: #666;
-    margin: 0;
-}
-
-
-main {
-    padding: 40px 0;
-}
-
-.page-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.page-header h2 {
-    font-family: 'Merriweather', serif;
-    font-size: 2.5rem;
-    color: #003366;
-    margin-bottom: 10px;
-}
-
-.page-header p {
-    font-size: 1.1rem;
-    color: #555;
-}
-
-.filter-section {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 30px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-}
-
-.filter-section input[type="text"] {
-    flex-grow: 1;
-}
-
-.filter-section input, .filter-section select, .filter-section button {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.filter-section button {
-    background-color: #0056b3;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    padding: 12px 25px;
-}
-
-.filter-section button:hover {
-    background-color: #003366;
-}
-
-.peraturan-list {
-    display: grid;
-    gap: 20px;
-}
-
-.peraturan-item {
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    padding: 25px;
-    border-radius: 8px;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
-}
-
-.peraturan-item:hover {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transform: translateY(-5px);
-}
-
-.peraturan-item h3 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-}
-
-.peraturan-item h3 a {
-    text-decoration: none;
-    color: #0056b3;
-}
-
-.peraturan-item h3 a:hover {
-    text-decoration: underline;
-}
-
-.peraturan-item p {
-    color: #555;
-    flex-grow: 1; 
-    margin-bottom: 15px;
-}
-
-.peraturan-item .metadata {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 15px;
-}
+        nav a:hover {
+            color: #1e3a8a;
+        }
 
 
-.status {
-    padding: 4px 10px;
-    border-radius: 15px;
-    color: #fff;
-    font-weight: bold;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-}
+      
+        .hero-section {
+            background-image: linear-gradient(rgba(20, 30, 70, 0.6), rgba(20, 30, 70, 0.6)), url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi0_gNF2KTKsekkSUkV1ORpVU43pEVNzBhbU2bjokbPMd1H96tAGiCXX-6i3pr3FKH9RATmcX1Q-zco_DnjFJu-vR24-TA2d4268S0a70536Ob1v-MxuyinaqF92R4pwVcXuVJWb4Y0cKQkDGjJXlizKW0TlanThHlT3dO5_N_FwjTkVGsbyGEvc2AELw/s960/1.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 200px 0;
+            text-align: center;
+            color: #fff;
+        }
 
-.status.berlaku {
-    background-color: #28a745; 
-}
+        .hero-section h2 {
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
 
-.status.diubah {
-    background-color: #ffc107; 
-    color: #333;
-}
+        .hero-section p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
 
-.status.dicabut {
-    background-color: #dc3545; 
-}
+       
+        .filter-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: -50px auto 40px auto;
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
+            align-items: center;
+        }
 
+        #searchInput {
+            flex-grow: 1;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            min-width: 200px;
+        }
 
-.download-button {
-    align-self: flex-end; 
-    text-decoration: none;
-    background-color: #e9ecef;
-    color: #333;
-    padding: 8px 15px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
+        #categoryFilter, #yearFilter {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+        }
 
-.download-button:hover {
-    background-color: #ced4da;
-}
+        .filter-section button {
+            padding: 12px 25px;
+            background-color: #1e3a8a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
 
+        .filter-section button:hover {
+            background-color: #1c3172;
+        }
 
-footer {
-    background-color: #003366;
-    color: #e0e0e0;
-    text-align: center;
-    padding: 25px 0;
-    margin-top: 40px;
-}
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
 
-footer p {
-    margin: 5px 0;
-    font-size: 0.9rem;
-}
+        .page-header h2 {
+            font-size: 2rem;
+            color: #1e3a8a;
+            margin-bottom: 5px;
+        }
+        
+        .page-header p {
+            font-size: 1rem;
+            color: #666;
+        }
 
+        .peraturan-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
 
-@media (max-width: 768px) {
-    .logo-area {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
+        .peraturan-item {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .peraturan-item:hover {
+             transform: translateY(-5px);
+             box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
 
-    .filter-section {
-        flex-direction: column;
-    }
-}
+        .peraturan-item h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .peraturan-item h3 a {
+            text-decoration: none;
+            color: #1e3a8a;
+        }
+
+        .peraturan-item p {
+            margin: 0 0 15px 0;
+            color: #555;
+            flex-grow: 1;
+        }
+
+        .metadata {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .status {
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .status.berlaku {
+            background-color: #28a745;
+        }
+
+        .status.dicabut {
+            background-color: #dc3545;
+        }
+
+        .download-button {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: 500;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .download-button:hover {
+            background-color: #1e3a8a;
+            color: #fff;
+        }
+
+        .download-button .fa-file-pdf {
+            margin-right: 8px;
+        }
+
+      
+        footer {
+            background-color: #1e3a8a;
+            color: #fff;
+            padding: 30px 0;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
