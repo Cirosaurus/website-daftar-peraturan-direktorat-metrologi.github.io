@@ -37,40 +37,32 @@
             <p>Jaringan Dokumentasi dan Informasi Hukum Direktorat Metrologi</p>
         </div>
 
-       <div class="filter-section">
-    <div class="filter-item search-bar">
-        <i class="fas fa-search"></i>
-        <input type="text" id="searchInput" placeholder="Cari berdasarkan nomor atau judul...">
-    </div>
+        <div class="container">
+            <div class="filter-section">
+                <input type="text" id="searchInput" placeholder="Cari berdasarkan nomor atau judul...">
+                
+                <select name="kategori" id="categoryFilter">
+                    <option value="">Semua Kategori</option>
+                    <option value="uu">Undang-Undang</option>
+                    <option value="pp">Peraturan Pemerintah</option>
+                    <option value="permen">Peraturan Menteri Perdagangan</option>
+                    <option value="st-uttp">Syarat Teknis UTTP</option>
+                    <option value="st-suml">Syarat Teknis SUML</option>
+                    <option value="st-pertip">Syarat Teknis Persetujuan Tipe</option>
+                    <option value="ref-int">Referensi Internasional</option>
+                    <option value="juknis">Petunjuk Teknis</option>
+                    <option value="suran">Surat Edaran</option>
+                    <option value="sni">Standar Nasional Indonesia/Internasional Standar</option>
+                    <option value="permepan">Peraturan Menteri Pemberdayaan Aparatur Negara</option>
+                    <option value="transki">Transparansi Kinerja</option>
+                </select>
 
-    <div class="filter-item">
-        <i class="fas fa-tags"></i>
-        <select name="kategori" id="categoryFilter">
-            <option value="">Semua Kategori</option>
-            <option value="uu">Undang-Undang</option>
-            <option value="pp">Peraturan Pemerintah</option>
-            <option value="permen">Peraturan Menteri Perdagangan</option>
-            <option value="st-uttp">Syarat Teknis UTTP</option>
-            <option value="st-suml">Syarat Teknis SUML</option>
-            <option value="st-pertip">Syarat Teknis Persetujuan Tipe</option>
-            <option value="ref-int">Referensi Internasional</option>
-            <option value="juknis">Petunjuk Teknis</option>
-            <option value="suran">Surat Edaran</option>
-            <option value="sni">Standar Nasional Indonesia/Internasional Standar</option>
-            <option value="permepan">Peraturan Menteri Pemberdayaan Aparatur Negara</option>
-            <option value="transki">Transparansi Kinerja</option>
-        </select>
-    </div>
+                <select name="tahun" id="yearFilter">
+                    <option value="">Semua Tahun</option>
+                </select>
 
-    <div class="filter-item">
-        <i class="fas fa-calendar-alt"></i>
-        <select name="tahun" id="yearFilter">
-            <option value="">Semua Tahun</option>
-            </select>
-    </div>
-
-    <button type="button">Cari</button>
-</div>
+                <button type="button">Cari</button>
+            </div>
 
             <div class="page-header">
                 <h2>Basis Data Peraturan</h2>
@@ -1815,6 +1807,8 @@
                 const selectedCategory = categoryFilter.value;
                 const selectedYear = yearFilter.value; // Ambil nilai tahun yang dipilih
 
+                
+
                 regulationItems.forEach(item => {
                     const itemTitle = item.querySelector('h3 a').textContent.toLowerCase();
                     const itemDescription = item.querySelector('p').textContent.toLowerCase();
@@ -1842,6 +1836,18 @@
             categoryFilter.addEventListener('change', performFilter);
             yearFilter.addEventListener('change', performFilter); // Event listener untuk filter tahun
             searchButton.addEventListener('click', performFilter);
+
+            
+        });
+
+        const searchButton = document.querySelector('.filter-section button');
+        const resultsSection = document.querySelector('.page-header');
+
+        searchButton.addEventListener('click', function() {
+            resultsSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         });
     </script>
 
