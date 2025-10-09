@@ -16,14 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function displayRegulations(items) {
         listContainer.innerHTML = ''; // Kosongkan daftar sebelum menampilkan hasil baru
         if (items.length === 0) {
-            listContainer.innerHTML = '<p style="text-align: center;">Tidak ada peraturan yang cocok dengan kriteria filter.</p>';
+            listContainer.innerHTML = `<p class="status-message" style="color: red;">Data peraturan tidak ditemukan.</p>`;
             return;
         }
 
         items.forEach(item => {
             const previewUrl = item.link_view ? item.link_view.replace('/view', '/preview').split('?')[0] : '#';
             const downloadUrl = item.link_download || '#';
-            
+
             const itemHTML = `
                 <div class="peraturan-item" data-category="${item.kategori}">
                     <h3><a href="${item.link_view}" target="_blank">${item.judul}</a></h3>
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const filteredData = allRegulations.filter(item => {
             const textMatch = item.judul.toLowerCase().includes(searchText) || item.deskripsi.toLowerCase().includes(searchText);
             const categoryMatch = !selectedCategory || item.kategori === selectedCategory;
-            
+
             // Ekstrak tahun dari judul (misal: "Undang-Undang Nomor 2 Tahun 1981")
             const yearInTitle = item.judul.match(/\b\d{4}\b/);
             const itemYear = yearInTitle ? yearInTitle[0] : null;
@@ -70,10 +70,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Bagian 4: Memuat Data Awal dan Mengaktifkan Filter ---
     async function initializeApp() {
+
+
+        function populateYearFilter() {
+            const startYear = 1981;
+            const endYear = 2025;
+
+            // Tambahkan opsi default "Semua Tahun"
+            yearFilter.innerHTML = '<option value="">Semua Tahun</option>';
+
+            // Loop dari tahun terakhir ke tahun pertama
+            for (let year = endYear; year >= startYear; year--) {
+                const option = document.createElement('option');
+                option.value = year;
+                option.textContent = year;
+                yearFilter.appendChild(option);
+            }
+        }
+
+        populateYearFilter()
+
         try {
             const response = await fetch('data.json');
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            
+
             allRegulations = await response.json(); // Simpan data ke variabel
             displayRegulations(allRegulations); // Tampilkan semua data saat pertama kali dimuat
 
@@ -83,9 +103,23 @@ document.addEventListener('DOMContentLoaded', () => {
             yearFilter.addEventListener('change', performFilter);
             searchButton.addEventListener('click', performFilter);
 
+             const pageHeader = document.querySelector('.page-header');
+        if (searchButton && pageHeader) {
+            searchButton.addEventListener('click', (event) => {
+                // Mencegah perilaku default tombol jika suatu saat dimasukkan ke dalam <form>
+                event.preventDefault(); 
+                
+                // Lakukan scroll ke bagian header halaman
+                pageHeader.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        }
+
         } catch (error) {
             console.error('Gagal memuat data peraturan:', error);
-            listContainer.innerHTML = `<p style="text-align: center; color: red;">Gagal memuat data peraturan.</p>`;
+            listContainer.innerHTML = `<p class="status-message" style="color: red;">Data peraturan tidak ditemukan</p>`;
         }
     }
 
