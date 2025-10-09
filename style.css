@@ -577,6 +577,92 @@ nav a:hover {
     margin-right: 8px;
 }
 
+/* ... (Existing CSS) ... */
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.preview-button, .download-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+    flex-grow: 1;
+    cursor: pointer;
+    border: none; /* For button element */
+    font-family: 'Poppins', sans-serif; /* For button element */
+}
+
+.preview-button {
+    background-color: #e0e0e0;
+}
+
+/* ... (Existing download-button styles) ... */
+
+/* Modal Styles */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 200; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.6); 
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 90%;
+  height: 90%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#previewFrame {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  flex-grow: 1;
+}
+
+.close-button {
+  color: #aaa;
+  position: absolute;
+  top: -5px;
+  right: 5px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ... (Existing media queries) ... */
+
 footer {
     background-color: #1e3a8a;
     color: #fff;
@@ -592,6 +678,444 @@ footer p {
 }
 
 
+.button-container {
+    display: flex;
+    gap: 10px; 
+    margin-top: auto; 
+}
+
+.preview-button, .download-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+    flex-grow: 1; 
+    cursor: pointer;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+}
+
+
+.preview-button {
+    background-color: #e0e0e0;
+}
+.preview-button:hover {
+    background-color: #1e3a8a;
+    color: #fff;
+}
+
+
+.preview-button .fa-eye,
+.download-button .fa-file-pdf {
+    margin-right: 8px;
+}
+
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 200; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: hidden; 
+  background-color: rgba(0,0,0,0.6); 
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 2% auto; 
+  padding: 15px;
+  border-radius: 8px;
+  width: 90%;
+  height: 94%;
+  max-width: 1200px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#previewFrame {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  flex-grow: 1;
+}
+
+.close-button {
+  color: #aaa;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  z-index: 210; 
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* --- Global & Font Imports --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header --- */
+header {
+    background-color: #ffffff;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.logo-area img {
+    height: 45px; 
+    margin-right: 15px;
+}
+
+.site-title h1 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #1e3a8a;
+    font-weight: 700;
+    text-align: center;
+}
+
+.site-title p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #555;
+    text-align: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #1e3a8a;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background-image: linear-gradient(rgba(20, 30, 70, 0.6), rgba(20, 30, 70, 0.6)), url('https://i.ytimg.com/vi/T7WWU3o3dk8/maxresdefault.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px; 
+    text-align: center;
+    color: #fff;
+}
+
+.hero-section h2 {
+    font-size: 1.8rem; 
+    margin: 0 0 10px 0;
+    font-weight: 700;
+}
+
+.hero-section p {
+    font-size: 1rem; 
+    margin-bottom: 30px;
+}
+
+/* --- Filter Section --- */
+.filter-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;
+    margin: -50px auto 40px auto;
+    position: relative;
+    z-index: 10;
+    max-width: 90%;
+}
+
+#searchInput, #categoryFilter, #yearFilter {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.filter-section button {
+    padding: 12px 25px;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.filter-section button:hover {
+    background-color: #1c3172;
+}
+
+/* --- Page Header --- */
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header h2 {
+    font-size: 2rem;
+    color: #1e3a8a;
+    margin-bottom: 5px;
+}
+    
+.page-header p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* --- Peraturan List --- */
+.peraturan-list {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 15px; 
+}
+
+.peraturan-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+    
+.peraturan-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.peraturan-item h3 {
+    margin: 0 0 10px 0;
+    font-size: 1rem; 
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.peraturan-item h3 a {
+    text-decoration: none;
+    color: #1e3a8a;
+}
+
+.peraturan-item p {
+    margin: 0 0 15px 0;
+    color: #555;
+    flex-grow: 1;
+    font-size: 0.9rem;
+}
+
+.metadata {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 8px;
+    font-size: 0.8rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.status {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-weight: 500;
+    color: #fff;
+    font-size: 0.75rem;
+}
+
+.status.berlaku { background-color: #28a745; }
+.status.dicabut { background-color: #dc3545; }
+.status.diubah { background-color: #dfcd09; }
+
+/* --- Buttons --- */
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.preview-button, .download-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+    flex-grow: 1;
+    cursor: pointer;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+}
+
+.preview-button {
+    background-color: #e0e0e0;
+}
+
+.preview-button:hover, .download-button:hover {
+    background-color: #1e3a8a;
+    color: #fff;
+}
+
+.download-button {
+    background-color: #f0f0f0;
+}
+
+.preview-button .fa-eye, .download-button .fa-file-pdf {
+    margin-right: 8px;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #1e3a8a;
+    color: #fff;
+    padding: 30px 0;
+    margin-top: 50px;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 200; 
+    left: 0; top: 0;
+    width: 100%; height: 100%; 
+    overflow: hidden; 
+    background-color: rgba(0,0,0,0.7);
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0 } 
+    to { opacity: 1 }
+}
+
+.modal-content {
+    background-color: #f4f7fa; 
+    margin: 2% auto;
+    padding: 15px;
+    border-radius: 8px;
+    width: 95%; height: 95%;
+    max-width: 1200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+
+.close-button {
+    border: none;
+    background-color: #1e3a8a;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+}
+
+.close-button:hover {
+    background-color: #1c3172;
+}
+
+
+.iframe-container {
+    flex-grow: 1; 
+    position: relative;
+    background-color: #fff; 
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#previewFrame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
 
 /* Tablet View (e.g., iPads) */
 @media (min-width: 768px) {
@@ -652,4 +1176,12 @@ footer p {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+.status-message {
+    grid-column: 1 / -1; 
+    text-align: center;
+    padding: 20px;
+}
+
+
 
