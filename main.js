@@ -147,3 +147,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Jalankan Aplikasi ---
     initializeApp();
 });
+

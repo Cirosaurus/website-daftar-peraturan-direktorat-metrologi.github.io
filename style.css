@@ -1140,7 +1140,7 @@ footer p {
     #searchInput {
         flex-grow: 1;
     }
-    #categoryFilter, #yearFilter, .filter-section button {
+    #categoryFilter, #yearFilter, #statusFilter, .filter-section button {
         width: auto; 
     }
     .peraturan-list {
@@ -1182,6 +1182,7 @@ footer p {
     text-align: center;
     padding: 20px;
 }
+
 
 
 
